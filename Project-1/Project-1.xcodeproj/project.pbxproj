@@ -24,6 +24,7 @@
 		0B480DA825C523F2004F9B91 /* nssl0045.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B480D9E25C523F1004F9B91 /* nssl0045.jpg */; };
 		0B480DA925C523F2004F9B91 /* nssl0042.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B480D9F25C523F1004F9B91 /* nssl0042.jpg */; };
 		0B480DB425C52E80004F9B91 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B480DB325C52E80004F9B91 /* DetailViewController.swift */; };
+		0B480DB825C57B19004F9B91 /* TableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B480DB725C57B19004F9B91 /* TableCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		0B480D9E25C523F1004F9B91 /* nssl0045.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0045.jpg; sourceTree = "<group>"; };
 		0B480D9F25C523F1004F9B91 /* nssl0042.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0042.jpg; sourceTree = "<group>"; };
 		0B480DB325C52E80004F9B91 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0B480DB725C57B19004F9B91 /* TableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				0B480D8025C44A02004F9B91 /* AppDelegate.swift */,
 				0B480D8225C44A02004F9B91 /* SceneDelegate.swift */,
 				0B480D8425C44A02004F9B91 /* ViewController.swift */,
+				0B480DB725C57B19004F9B91 /* TableCellView.swift */,
 				0B480DB325C52E80004F9B91 /* DetailViewController.swift */,
 				0B480D8625C44A02004F9B91 /* Main.storyboard */,
 				0B480D8925C44A05004F9B91 /* Assets.xcassets */,
@@ -192,6 +195,7 @@
 				0B480D8125C44A02004F9B91 /* AppDelegate.swift in Sources */,
 				0B480D8325C44A02004F9B91 /* SceneDelegate.swift in Sources */,
 				0B480DB425C52E80004F9B91 /* DetailViewController.swift in Sources */,
+				0B480DB825C57B19004F9B91 /* TableCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

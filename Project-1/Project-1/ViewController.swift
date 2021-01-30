@@ -33,9 +33,14 @@ class ViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-        cell.textLabel?.text = pictures[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath) as! TableCellView
 
+        cell.imageView2?.image = UIImage(named: pictures[indexPath.row])
+        cell.imageView2?.contentMode = .scaleAspectFit
+        cell.imageView2?.clipsToBounds = true
+        cell.imageView2?.layer.cornerRadius = 100
+        cell.titleLabel.text = pictures[indexPath.row]
+        cell.descLabel.text = "\(indexPath.row)"
         return cell
     }
 
