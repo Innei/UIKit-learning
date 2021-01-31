@@ -14,6 +14,7 @@ class ViewController: UITableViewController {
 
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
+       
 
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
@@ -51,4 +52,6 @@ class ViewController: UITableViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
+    
 }
