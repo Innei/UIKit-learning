@@ -18,6 +18,9 @@
                         <subviews>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EO-Lt-UYF">
                                 <rect key="frame" x="107" y="454" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1EO-Lt-UYF" secondAttribute="height" multiplier="2:1" id="PAF-3L-SU3"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="spain"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kvd-G3-Cnk"/>
@@ -25,6 +28,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAH-5f-wmP">
                                 <rect key="frame" x="107" y="301" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qAH-5f-wmP" secondAttribute="height" multiplier="2:1" id="OCr-2P-r4R"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t7O-eN-qHM"/>
@@ -32,6 +38,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XF7-gt-DKm">
                                 <rect key="frame" x="107" y="154" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XF7-gt-DKm" secondAttribute="height" multiplier="2:1" id="plU-03-Thy"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="uk"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jTX-97-LcF"/>
@@ -44,11 +53,14 @@
                             <constraint firstItem="XF7-gt-DKm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="13n-Mk-QQC"/>
                             <constraint firstItem="1EO-Lt-UYF" firstAttribute="top" secondItem="qAH-5f-wmP" secondAttribute="bottom" constant="53" id="2FD-6J-RwX"/>
                             <constraint firstItem="XF7-gt-DKm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="8l8-3w-g8O"/>
+                            <constraint firstItem="qAH-5f-wmP" firstAttribute="height" secondItem="XF7-gt-DKm" secondAttribute="height" id="DsN-Du-0Yl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1EO-Lt-UYF" secondAttribute="bottom" constant="20" id="HN0-ge-MSn"/>
                             <constraint firstItem="XF7-gt-DKm" firstAttribute="trailing" secondItem="qAH-5f-wmP" secondAttribute="trailing" id="RRG-VT-vJh"/>
                             <constraint firstItem="qAH-5f-wmP" firstAttribute="trailing" secondItem="1EO-Lt-UYF" secondAttribute="trailing" id="S6n-GM-VUD"/>
                             <constraint firstItem="1EO-Lt-UYF" firstAttribute="centerX" secondItem="qAH-5f-wmP" secondAttribute="centerX" id="Ut9-Nt-Xe2"/>
                             <constraint firstItem="XF7-gt-DKm" firstAttribute="leading" secondItem="qAH-5f-wmP" secondAttribute="leading" id="cYV-jV-p9Q"/>
                             <constraint firstItem="qAH-5f-wmP" firstAttribute="top" secondItem="XF7-gt-DKm" secondAttribute="bottom" constant="47" id="lmr-0T-ix0"/>
+                            <constraint firstItem="1EO-Lt-UYF" firstAttribute="height" secondItem="qAH-5f-wmP" secondAttribute="height" id="tuw-BJ-Qdp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XF7-gt-DKm" secondAttribute="trailing" constant="107" id="vE0-O5-HyY"/>
                             <constraint firstItem="qAH-5f-wmP" firstAttribute="leading" secondItem="1EO-Lt-UYF" secondAttribute="leading" id="vft-ve-adG"/>
                             <constraint firstItem="qAH-5f-wmP" firstAttribute="centerX" secondItem="XF7-gt-DKm" secondAttribute="centerX" id="wPq-FO-75q"/>

@@ -14,7 +14,9 @@ class ViewController: UITableViewController {
 
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
-       
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        self.refreshControl = refreshControl
 
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
@@ -29,13 +31,19 @@ class ViewController: UITableViewController {
         }
     }
 
+    @objc func handleRefresh() {
+        DispatchQueue.main.async {
+            self.refreshControl?.endRefreshing()
+        }
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pictures.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath) as! TableCellView
-
+        cell.accessoryType = .disclosureIndicator
         cell.imageView2?.image = UIImage(named: pictures[indexPath.row])
         cell.imageView2?.contentMode = .scaleAspectFit
         cell.imageView2?.clipsToBounds = true
@@ -52,6 +60,4 @@ class ViewController: UITableViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
-    
 }
