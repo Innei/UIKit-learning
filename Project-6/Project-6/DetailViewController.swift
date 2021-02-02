@@ -12,7 +12,9 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = UIColor.white
+        
+        
         guard let detailItem = detailItem else { return }
 
         let html = """
