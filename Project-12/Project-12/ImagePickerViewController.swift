@@ -9,10 +9,10 @@ import CoreImage
 import UIKit
 
 class ImagePickerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    private var imageView: UIImageView!
+    private var image: UIImageView!
     private var currentImage: UIImage! {
         didSet {
-            imageView.image = currentImage
+            image.image = currentImage
         }
     }
 
@@ -24,7 +24,6 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Picker"
-        
 
         let barItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(changeFilter))
 
@@ -45,13 +44,17 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
 
-        imageView = UIImageView()
+        image = UIImageView()
 
-        imageView.backgroundColor = .systemGray4
-        view.addSubview(imageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
+        image.backgroundColor = .systemGray4
+        view.addSubview(image)
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.clipsToBounds = true
+        image.contentMode = .scaleAspectFit
+        image.isUserInteractionEnabled = true
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed))
+
+        image.addGestureRecognizer(longPressRecognizer)
 
         let slider = UISlider()
         intensity = slider
@@ -65,11 +68,32 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
         ])
 
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: slider.topAnchor, constant: -25),
-            imageView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            imageView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            image.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            image.bottomAnchor.constraint(equalTo: slider.topAnchor, constant: -25),
+            image.leftAnchor.constraint(equalTo: view.leftAnchor),
+            image.rightAnchor.constraint(equalTo: view.rightAnchor),
         ])
+    }
+
+    @objc func longPressed(sender: UILongPressGestureRecognizer) {
+        if sender.state != .ended {
+            return
+        }
+
+        UIImageWriteToSavedPhotosAlbum(image.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
     }
 
     @objc func changeFilter() {
@@ -136,7 +160,7 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
         }
         if let cgimg = context.createCGImage(currentFilter.outputImage!, from: currentFilter.outputImage!.extent) {
             let processedImage = UIImage(cgImage: cgimg)
-            imageView.image = processedImage
+            image.image = processedImage
         }
     }
 }

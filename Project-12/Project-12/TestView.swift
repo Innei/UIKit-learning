@@ -21,7 +21,7 @@ enum SFSymbol: String, View {
     }
 }
 
-struct HomeView: View {
+struct TestView: View {
     @State var people: [Person] = []
     @State private var editMode: EditMode = EditMode.inactive
 
@@ -51,9 +51,9 @@ struct HomeView: View {
 
 //                        Item1()
                         Button(action: {
-                            self.editMode = EditMode.active
+                            self.editMode = self.editMode == EditMode.inactive ? EditMode.active : EditMode.inactive
                         }) {
-                            Text("Edit")
+                            Text(self.editMode == EditMode.inactive ? "Edit" : "Done")
                         }
                         Button(action: {
                             let ac = UIAlertController(title: "", message: nil, preferredStyle: .alert)
@@ -153,8 +153,6 @@ struct HomeView: View {
             }
         )
         .onAppear {
-//            myNavigationController.navigationItem.title = "Home"
-//            myNavigationController.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: nil)
             let defaults = UserDefaults.standard
 
             if let savedPeople = defaults.object(forKey: "people") as? Data {
@@ -174,6 +172,6 @@ extension View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        TestView()
     }
 }
