@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BC5F93B25DFF5A800AE78A5 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F93A25DFF5A800AE78A5 /* LocationView.swift */; };
 		0BF2DA7425DBB44800B0ABAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DA7325DBB44800B0ABAA /* AppDelegate.swift */; };
 		0BF2DA7625DBB44800B0ABAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DA7525DBB44800B0ABAA /* SceneDelegate.swift */; };
 		0BF2DA7825DBB44800B0ABAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DA7725DBB44800B0ABAA /* ViewController.swift */; };
@@ -21,9 +22,24 @@
 		0BF2DA9D25DD516B00B0ABAA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DA9C25DD516B00B0ABAA /* ListView.swift */; };
 		0BF2DAA125DD553900B0ABAA /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DAA025DD553900B0ABAA /* Capital.swift */; };
 		0BF2DAA425DD561700B0ABAA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DAA325DD561700B0ABAA /* MapViewController.swift */; };
+		0BF2DAA725DE1B3500B0ABAA /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DAA625DE1B3400B0ABAA /* DebugViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0BF2DABD25DE290000B0ABAA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0BC5F93A25DFF5A800AE78A5 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		0BF2DA7025DBB44800B0ABAA /* Project-12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF2DA7325DBB44800B0ABAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BF2DA7525DBB44800B0ABAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +56,7 @@
 		0BF2DA9C25DD516B00B0ABAA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		0BF2DAA025DD553900B0ABAA /* Capital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
 		0BF2DAA325DD561700B0ABAA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0BF2DAA625DE1B3400B0ABAA /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +96,8 @@
 				0BF2DA8D25DBBD0E00B0ABAA /* TestView.swift */,
 				0BF2DA9C25DD516B00B0ABAA /* ListView.swift */,
 				0BF2DAA325DD561700B0ABAA /* MapViewController.swift */,
+				0BF2DAA625DE1B3400B0ABAA /* DebugViewController.swift */,
+				0BC5F93A25DFF5A800AE78A5 /* LocationView.swift */,
 				0BF2DAA025DD553900B0ABAA /* Capital.swift */,
 				0BF2DA9325DD2F4A00B0ABAA /* ImagePickerViewController.swift */,
 				0BF2DA9025DBED2000B0ABAA /* StorageView.swift */,
@@ -101,6 +120,7 @@
 				0BF2DA6C25DBB44800B0ABAA /* Sources */,
 				0BF2DA6D25DBB44800B0ABAA /* Frameworks */,
 				0BF2DA6E25DBB44800B0ABAA /* Resources */,
+				0BF2DABD25DE290000B0ABAA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -161,12 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC5F93B25DFF5A800AE78A5 /* LocationView.swift in Sources */,
 				0BF2DAA425DD561700B0ABAA /* MapViewController.swift in Sources */,
 				0BF2DA9125DBED2000B0ABAA /* StorageView.swift in Sources */,
 				0BF2DA7825DBB44800B0ABAA /* ViewController.swift in Sources */,
 				0BF2DA9425DD2F4A00B0ABAA /* ImagePickerViewController.swift in Sources */,
 				0BF2DA7425DBB44800B0ABAA /* AppDelegate.swift in Sources */,
 				0BF2DAA125DD553900B0ABAA /* Capital.swift in Sources */,
+				0BF2DAA725DE1B3500B0ABAA /* DebugViewController.swift in Sources */,
 				0BF2DA8B25DBB9F500B0ABAA /* Person.swift in Sources */,
 				0BF2DA8E25DBBD0E00B0ABAA /* TestView.swift in Sources */,
 				0BF2DA9A25DD49B500B0ABAA /* ImageViewController.swift in Sources */,
@@ -316,6 +338,7 @@
 		0BF2DA8525DBB44A00B0ABAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -335,6 +358,7 @@
 		0BF2DA8625DBB44A00B0ABAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

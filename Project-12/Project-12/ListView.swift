@@ -34,12 +34,18 @@ struct ListView: View {
                 LinkButton(text: "MapView") {
                     myNavigationController.pushViewController(MapViewController(), animated: true)
                 }
+                LinkButton(text: "DebugView") {
+                    myNavigationController.pushViewController(DebugViewController(), animated: true)
+                }
             }
 
             Section(header: Text("SwiftUI View Group")) {
                 NavigationLink("StorageView", destination: StorageView())
                 NavigationLink(destination: TestView()) {
                     Text("View")
+                }
+                NavigationLink(destination: LocationView()) {
+                    Text("LocationView")
                 }
             }
         }
