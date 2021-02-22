@@ -34,8 +34,23 @@ struct ListView: View {
                 LinkButton(text: "MapView") {
                     myNavigationController.pushViewController(MapViewController(), animated: true)
                 }
-                LinkButton(text: "DebugView") {
-                    myNavigationController.pushViewController(DebugViewController(), animated: true)
+                LinkButton(text: "NotificationView") {
+                    myNavigationController.pushViewController(NotificationViewController(), animated: true)
+                }
+                LinkButton(text: "NSAttributedStringView") {
+                    myNavigationController.pushViewController(NSAttributedStringViewController(), animated: true)
+                }
+                LinkButton(text: "FlexLayoutView") {
+                    myNavigationController.pushViewController(FlexLayoutViewController(), animated: true)
+                }
+                LinkButton(text: "DrawShapeView") {
+                    myNavigationController.pushViewController(DrawShapeViewController(), animated: true)
+                }
+                LinkButton(text: "EditorView") {
+                    myNavigationController.pushViewController(EditorViewController(), animated: true)
+                }
+                LinkButton(text: "AuthenticationView") {
+                    myNavigationController.pushViewController(AuthenticationViewController(), animated: true)
                 }
             }
 

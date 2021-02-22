@@ -8,7 +8,7 @@
 import UIKit
 import UserNotifications
 
-class DebugViewController: UIViewController, UNUserNotificationCenterDelegate {
+class NotificationViewController: UIViewController, UNUserNotificationCenterDelegate {
     var labelView: UILabel!
 
     private var count = 0 {

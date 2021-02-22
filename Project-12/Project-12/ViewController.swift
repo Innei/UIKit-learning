@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 
 var hv = UIHostingController(rootView: ListView())
-var myNavigationController = UINavigationController(rootViewController: hv)
+var myNavigationController = SwipeNavigationController(rootViewController: hv)
 
 class ViewController: UIViewController {
     override func viewDidLoad() {

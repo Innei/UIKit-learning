@@ -20,7 +20,6 @@ class LocationManagerDelegate: NSObject, CLLocationManagerDelegate {
         if status == .authorizedAlways {
             if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
                 if CLLocationManager.isRangingAvailable() {
-                    
                 }
             }
         }

@@ -3,11 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0BC5F93B25DFF5A800AE78A5 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F93A25DFF5A800AE78A5 /* LocationView.swift */; };
+		0BC5F93F25E149D200AE78A5 /* NSAttributedStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F93E25E149D200AE78A5 /* NSAttributedStringViewController.swift */; };
+		0BC5F94325E14A6800AE78A5 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 0BC5F94225E14A6800AE78A5 /* FlexLayout */; };
+		0BC5F94725E14A9100AE78A5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0BC5F94625E14A9100AE78A5 /* SnapKit */; };
+		0BC5F94B25E14B9C00AE78A5 /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = 0BC5F94A25E14B9C00AE78A5 /* FlexLayoutYoga */; };
+		0BC5F94D25E14B9F00AE78A5 /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0BC5F94C25E14B9F00AE78A5 /* FlexLayoutYogaKit */; };
+		0BC5F95125E1507F00AE78A5 /* FlexLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F95025E1507F00AE78A5 /* FlexLayoutViewController.swift */; };
+		0BC5F95525E1529700AE78A5 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 0BC5F95425E1529700AE78A5 /* PinLayout */; };
+		0BC5F95825E24AF600AE78A5 /* DrawShapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F95725E24AF600AE78A5 /* DrawShapeViewController.swift */; };
+		0BC5F96125E2733B00AE78A5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F96025E2733B00AE78A5 /* Extension.swift */; };
+		0BC5F96E25E27A0500AE78A5 /* SwipeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F96D25E27A0500AE78A5 /* SwipeNavigationController.swift */; };
+		0BC5F97125E2804800AE78A5 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F97025E2804800AE78A5 /* EditorViewController.swift */; };
+		0BC5F97525E35C6400AE78A5 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F97425E35C6400AE78A5 /* AuthenticationViewController.swift */; };
 		0BF2DA7425DBB44800B0ABAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DA7325DBB44800B0ABAA /* AppDelegate.swift */; };
 		0BF2DA7625DBB44800B0ABAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DA7525DBB44800B0ABAA /* SceneDelegate.swift */; };
 		0BF2DA7825DBB44800B0ABAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DA7725DBB44800B0ABAA /* ViewController.swift */; };
@@ -22,7 +34,7 @@
 		0BF2DA9D25DD516B00B0ABAA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DA9C25DD516B00B0ABAA /* ListView.swift */; };
 		0BF2DAA125DD553900B0ABAA /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DAA025DD553900B0ABAA /* Capital.swift */; };
 		0BF2DAA425DD561700B0ABAA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DAA325DD561700B0ABAA /* MapViewController.swift */; };
-		0BF2DAA725DE1B3500B0ABAA /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DAA625DE1B3400B0ABAA /* DebugViewController.swift */; };
+		0BF2DAA725DE1B3500B0ABAA /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2DAA625DE1B3400B0ABAA /* NotificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +52,13 @@
 
 /* Begin PBXFileReference section */
 		0BC5F93A25DFF5A800AE78A5 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		0BC5F93E25E149D200AE78A5 /* NSAttributedStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringViewController.swift; sourceTree = "<group>"; };
+		0BC5F95025E1507F00AE78A5 /* FlexLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutViewController.swift; sourceTree = "<group>"; };
+		0BC5F95725E24AF600AE78A5 /* DrawShapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawShapeViewController.swift; sourceTree = "<group>"; };
+		0BC5F96025E2733B00AE78A5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		0BC5F96D25E27A0500AE78A5 /* SwipeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeNavigationController.swift; sourceTree = "<group>"; };
+		0BC5F97025E2804800AE78A5 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		0BC5F97425E35C6400AE78A5 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		0BF2DA7025DBB44800B0ABAA /* Project-12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF2DA7325DBB44800B0ABAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BF2DA7525DBB44800B0ABAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +75,7 @@
 		0BF2DA9C25DD516B00B0ABAA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		0BF2DAA025DD553900B0ABAA /* Capital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
 		0BF2DAA325DD561700B0ABAA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		0BF2DAA625DE1B3400B0ABAA /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
+		0BF2DAA625DE1B3400B0ABAA /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,17 +83,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC5F94325E14A6800AE78A5 /* FlexLayout in Frameworks */,
+				0BC5F95525E1529700AE78A5 /* PinLayout in Frameworks */,
+				0BC5F94725E14A9100AE78A5 /* SnapKit in Frameworks */,
+				0BC5F94D25E14B9F00AE78A5 /* FlexLayoutYogaKit in Frameworks */,
+				0BC5F94B25E14B9C00AE78A5 /* FlexLayoutYoga in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BC5F94925E14B9C00AE78A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0BF2DA6725DBB44800B0ABAA = {
 			isa = PBXGroup;
 			children = (
 				0BF2DA7225DBB44800B0ABAA /* Project-12 */,
 				0BF2DA7125DBB44800B0ABAA /* Products */,
+				0BC5F94925E14B9C00AE78A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,22 +122,29 @@
 			isa = PBXGroup;
 			children = (
 				0BF2DA7325DBB44800B0ABAA /* AppDelegate.swift */,
-				0BF2DA7525DBB44800B0ABAA /* SceneDelegate.swift */,
-				0BF2DA7725DBB44800B0ABAA /* ViewController.swift */,
-				0BF2DA9925DD49B500B0ABAA /* ImageViewController.swift */,
-				0BF2DA8D25DBBD0E00B0ABAA /* TestView.swift */,
-				0BF2DA9C25DD516B00B0ABAA /* ListView.swift */,
-				0BF2DAA325DD561700B0ABAA /* MapViewController.swift */,
-				0BF2DAA625DE1B3400B0ABAA /* DebugViewController.swift */,
-				0BC5F93A25DFF5A800AE78A5 /* LocationView.swift */,
-				0BF2DAA025DD553900B0ABAA /* Capital.swift */,
-				0BF2DA9325DD2F4A00B0ABAA /* ImagePickerViewController.swift */,
-				0BF2DA9025DBED2000B0ABAA /* StorageView.swift */,
-				0BF2DA8A25DBB9F500B0ABAA /* Person.swift */,
-				0BF2DA7925DBB44800B0ABAA /* Main.storyboard */,
 				0BF2DA7C25DBB44A00B0ABAA /* Assets.xcassets */,
-				0BF2DA7E25DBB44A00B0ABAA /* LaunchScreen.storyboard */,
+				0BC5F97425E35C6400AE78A5 /* AuthenticationViewController.swift */,
+				0BF2DAA025DD553900B0ABAA /* Capital.swift */,
+				0BC5F95725E24AF600AE78A5 /* DrawShapeViewController.swift */,
+				0BC5F97025E2804800AE78A5 /* EditorViewController.swift */,
+				0BC5F96D25E27A0500AE78A5 /* SwipeNavigationController.swift */,
+				0BC5F96025E2733B00AE78A5 /* Extension.swift */,
+				0BC5F95025E1507F00AE78A5 /* FlexLayoutViewController.swift */,
+				0BF2DA9325DD2F4A00B0ABAA /* ImagePickerViewController.swift */,
+				0BF2DA9925DD49B500B0ABAA /* ImageViewController.swift */,
 				0BF2DA8125DBB44A00B0ABAA /* Info.plist */,
+				0BF2DA7E25DBB44A00B0ABAA /* LaunchScreen.storyboard */,
+				0BC5F93A25DFF5A800AE78A5 /* LocationView.swift */,
+				0BF2DA9C25DD516B00B0ABAA /* ListView.swift */,
+				0BF2DA7925DBB44800B0ABAA /* Main.storyboard */,
+				0BF2DAA325DD561700B0ABAA /* MapViewController.swift */,
+				0BF2DAA625DE1B3400B0ABAA /* NotificationViewController.swift */,
+				0BC5F93E25E149D200AE78A5 /* NSAttributedStringViewController.swift */,
+				0BF2DA8A25DBB9F500B0ABAA /* Person.swift */,
+				0BF2DA7525DBB44800B0ABAA /* SceneDelegate.swift */,
+				0BF2DA9025DBED2000B0ABAA /* StorageView.swift */,
+				0BF2DA8D25DBBD0E00B0ABAA /* TestView.swift */,
+				0BF2DA7725DBB44800B0ABAA /* ViewController.swift */,
 			);
 			path = "Project-12";
 			sourceTree = "<group>";
@@ -127,6 +166,13 @@
 			dependencies = (
 			);
 			name = "Project-12";
+			packageProductDependencies = (
+				0BC5F94225E14A6800AE78A5 /* FlexLayout */,
+				0BC5F94625E14A9100AE78A5 /* SnapKit */,
+				0BC5F94A25E14B9C00AE78A5 /* FlexLayoutYoga */,
+				0BC5F94C25E14B9F00AE78A5 /* FlexLayoutYogaKit */,
+				0BC5F95425E1529700AE78A5 /* PinLayout */,
+			);
 			productName = "Project-12";
 			productReference = 0BF2DA7025DBB44800B0ABAA /* Project-12.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +200,11 @@
 				Base,
 			);
 			mainGroup = 0BF2DA6725DBB44800B0ABAA;
+			packageReferences = (
+				0BC5F94125E14A6800AE78A5 /* XCRemoteSwiftPackageReference "FlexLayout" */,
+				0BC5F94525E14A9100AE78A5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0BC5F95325E1529700AE78A5 /* XCRemoteSwiftPackageReference "PinLayout" */,
+			);
 			productRefGroup = 0BF2DA7125DBB44800B0ABAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,12 +234,19 @@
 			files = (
 				0BC5F93B25DFF5A800AE78A5 /* LocationView.swift in Sources */,
 				0BF2DAA425DD561700B0ABAA /* MapViewController.swift in Sources */,
+				0BC5F93F25E149D200AE78A5 /* NSAttributedStringViewController.swift in Sources */,
 				0BF2DA9125DBED2000B0ABAA /* StorageView.swift in Sources */,
+				0BC5F95125E1507F00AE78A5 /* FlexLayoutViewController.swift in Sources */,
 				0BF2DA7825DBB44800B0ABAA /* ViewController.swift in Sources */,
+				0BC5F96E25E27A0500AE78A5 /* SwipeNavigationController.swift in Sources */,
+				0BC5F95825E24AF600AE78A5 /* DrawShapeViewController.swift in Sources */,
+				0BC5F97125E2804800AE78A5 /* EditorViewController.swift in Sources */,
 				0BF2DA9425DD2F4A00B0ABAA /* ImagePickerViewController.swift in Sources */,
 				0BF2DA7425DBB44800B0ABAA /* AppDelegate.swift in Sources */,
+				0BC5F96125E2733B00AE78A5 /* Extension.swift in Sources */,
+				0BC5F97525E35C6400AE78A5 /* AuthenticationViewController.swift in Sources */,
 				0BF2DAA125DD553900B0ABAA /* Capital.swift in Sources */,
-				0BF2DAA725DE1B3500B0ABAA /* DebugViewController.swift in Sources */,
+				0BF2DAA725DE1B3500B0ABAA /* NotificationViewController.swift in Sources */,
 				0BF2DA8B25DBB9F500B0ABAA /* Person.swift in Sources */,
 				0BF2DA8E25DBBD0E00B0ABAA /* TestView.swift in Sources */,
 				0BF2DA9A25DD49B500B0ABAA /* ImageViewController.swift in Sources */,
@@ -343,6 +401,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VYQTBFBS5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"FLEXLAYOUT_SWIFT_PACKAGE=1",
+				);
 				INFOPLIST_FILE = "Project-12/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -397,6 +460,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0BC5F94125E14A6800AE78A5 /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.20;
+			};
+		};
+		0BC5F94525E14A9100AE78A5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		0BC5F95325E1529700AE78A5 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0BC5F94225E14A6800AE78A5 /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BC5F94125E14A6800AE78A5 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
+		};
+		0BC5F94625E14A9100AE78A5 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BC5F94525E14A9100AE78A5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		0BC5F94A25E14B9C00AE78A5 /* FlexLayoutYoga */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BC5F94125E14A6800AE78A5 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayoutYoga;
+		};
+		0BC5F94C25E14B9F00AE78A5 /* FlexLayoutYogaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BC5F94125E14A6800AE78A5 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayoutYogaKit;
+		};
+		0BC5F95425E1529700AE78A5 /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BC5F95325E1529700AE78A5 /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0BF2DA6825DBB44800B0ABAA /* Project object */;
 }

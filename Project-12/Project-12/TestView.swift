@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-extension Array {
-    mutating func push(_ el: Element) {
-        append(el)
-    }
-}
-
 enum SFSymbol: String, View {
     case right = "chevron.forward"
 
@@ -161,12 +155,6 @@ struct TestView: View {
                 }
             }
         }
-    }
-}
-
-extension View {
-    var rootController: UIViewController {
-        UIApplication.shared.windows.first!.rootViewController!
     }
 }
 
