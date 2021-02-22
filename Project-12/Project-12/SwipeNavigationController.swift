@@ -66,8 +66,10 @@ extension SwipeNavigationController: UINavigationControllerDelegate {
 // MARK: - UIGestureRecognizerDelegate
 
 extension SwipeNavigationController: UIGestureRecognizerDelegate {
+
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        guard gestureRecognizer == interactivePopGestureRecognizer else {
+       
+        guard gestureRecognizer == interactivePopGestureRecognizer  else {
             return true // default value
         }
 
@@ -76,4 +78,6 @@ extension SwipeNavigationController: UIGestureRecognizerDelegate {
         // 2) when user swipes quickly a couple of times and animations don't have time to be performed
         return viewControllers.count > 1 && duringPushAnimation == false
     }
+
+    
 }

@@ -17,5 +17,14 @@ class ViewController: UIViewController {
 
         view.addSubview(myNavigationController.view)
         myNavigationController.navigationBar.prefersLargeTitles = true
+        
+        
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipe))
+        swipeGesture.direction = .right
+        view.addGestureRecognizer(swipeGesture)
+    }
+    
+    @objc func swipe() {
+        print("swipe")
     }
 }
