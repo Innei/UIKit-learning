@@ -7,7 +7,14 @@
 
 import UIKit
 
-class ImageViewController: UIViewController {
+class ImageViewController: UIViewController, UIContextMenuInteractionDelegate {
+    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil, actionProvider: { _ in
+
+            self.makeContextMenu()
+        })
+    }
+
     var imageView: UIImageView!
     var currentAnimation = 0
 
@@ -32,6 +39,9 @@ class ImageViewController: UIViewController {
         let reconginzer = UITapGestureRecognizer(target: self, action: #selector(tapped))
         imageView.addGestureRecognizer(reconginzer)
 
+        let interaction = UIContextMenuInteraction(delegate: self)
+        imageView.addInteraction(interaction)
+        
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
 
@@ -42,6 +52,16 @@ class ImageViewController: UIViewController {
             button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
+    }
+
+    func makeContextMenu() -> UIMenu {
+        let share = UIAction(title: "Share Pupper", image: UIImage(systemName: "square.and.arrow.up")) { action in
+            let ac = UIActivityViewController(activityItems: [self.imageView.image?.pngData()], applicationActivities: nil)
+            self.present(ac, animated: true, completion: nil)
+        }
+
+        // Create and return a UIMenu with the share action
+        return UIMenu(title: "Main Menu", children: [share])
     }
 
     @objc func tapped(sender: UITapGestureRecognizer) {

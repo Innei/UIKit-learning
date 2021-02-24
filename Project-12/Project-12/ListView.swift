@@ -49,8 +49,13 @@ struct ListView: View {
                 LinkButton(text: "EditorView") {
                     myNavigationController.pushViewController(EditorViewController(), animated: true)
                 }
+
                 LinkButton(text: "AuthenticationView") {
                     myNavigationController.pushViewController(AuthenticationViewController(), animated: true)
+                }
+
+                LinkButton(text: "MSFSafariView") {
+                    myNavigationController.pushViewController(MSFSafariViewController(), animated: true)
                 }
             }
 
@@ -64,8 +69,18 @@ struct ListView: View {
                 }
             }
         }
-        .listStyle(GroupedListStyle())
+        .modifier(ListStyleModifier())
         .navigationTitle("Menu")
+    }
+}
+
+struct ListStyleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone {
+            return AnyView(content.listStyle(GroupedListStyle()))
+        } else {
+            return AnyView(content.listStyle(InsetGroupedListStyle()))
+        }
     }
 }
 

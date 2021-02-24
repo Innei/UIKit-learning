@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2FC8CA25E53A5A006D75EE /* MSFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FC8C925E53A5A006D75EE /* MSFSafariViewController.swift */; };
 		0BC5F93B25DFF5A800AE78A5 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F93A25DFF5A800AE78A5 /* LocationView.swift */; };
 		0BC5F93F25E149D200AE78A5 /* NSAttributedStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F93E25E149D200AE78A5 /* NSAttributedStringViewController.swift */; };
 		0BC5F94325E14A6800AE78A5 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 0BC5F94225E14A6800AE78A5 /* FlexLayout */; };
@@ -51,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B2FC8C925E53A5A006D75EE /* MSFSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSFSafariViewController.swift; sourceTree = "<group>"; };
 		0BC5F93A25DFF5A800AE78A5 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		0BC5F93E25E149D200AE78A5 /* NSAttributedStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringViewController.swift; sourceTree = "<group>"; };
 		0BC5F95025E1507F00AE78A5 /* FlexLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				0BC5F95725E24AF600AE78A5 /* DrawShapeViewController.swift */,
 				0BC5F97025E2804800AE78A5 /* EditorViewController.swift */,
 				0BC5F96D25E27A0500AE78A5 /* SwipeNavigationController.swift */,
+				0B2FC8C925E53A5A006D75EE /* MSFSafariViewController.swift */,
 				0BC5F96025E2733B00AE78A5 /* Extension.swift */,
 				0BC5F95025E1507F00AE78A5 /* FlexLayoutViewController.swift */,
 				0BF2DA9325DD2F4A00B0ABAA /* ImagePickerViewController.swift */,
@@ -249,6 +252,7 @@
 				0BF2DAA725DE1B3500B0ABAA /* NotificationViewController.swift in Sources */,
 				0BF2DA8B25DBB9F500B0ABAA /* Person.swift in Sources */,
 				0BF2DA8E25DBBD0E00B0ABAA /* TestView.swift in Sources */,
+				0B2FC8CA25E53A5A006D75EE /* MSFSafariViewController.swift in Sources */,
 				0BF2DA9A25DD49B500B0ABAA /* ImageViewController.swift in Sources */,
 				0BF2DA7625DBB44800B0ABAA /* SceneDelegate.swift in Sources */,
 				0BF2DA9D25DD516B00B0ABAA /* ListView.swift in Sources */,
