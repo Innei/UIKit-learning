@@ -8,6 +8,9 @@
 import SafariServices
 import UIKit
 
+import CoreSpotlight
+import MobileCoreServices
+
 class Project {
     public var projects = [[String]]()
     init() {
@@ -22,6 +25,7 @@ class Project {
 }
 
 class MSFSafariViewController: UITableViewController, UISearchControllerDelegate, UISearchResultsUpdating, SFSafariViewControllerDelegate, UIContextMenuInteractionDelegate {
+    var favorites = [Int]()
     func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
         return UIContextMenuConfiguration(identifier: nil, previewProvider: nil, actionProvider: { _ in
 
@@ -70,6 +74,14 @@ class MSFSafariViewController: UITableViewController, UISearchControllerDelegate
         navigationItem.searchController = searchController
 
         title = "SFSafariView"
+
+        let defaults = UserDefaults.standard
+        if let savedFavorites = defaults.object(forKey: "favorites") as? [Int] {
+            favorites = savedFavorites
+        }
+
+        tableView.isEditing = true
+        tableView.allowsSelectionDuringEditing = true
     }
 
     @objc func longPressHandler(longPressGesture: UILongPressGestureRecognizer) {
@@ -96,6 +108,11 @@ class MSFSafariViewController: UITableViewController, UISearchControllerDelegate
         cell.textLabel?.attributedText = makeAttributedString(title: project[0], subtitle: project[1])
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.textAlignment = .left
+        if favorites.contains(indexPath.row) {
+            cell.editingAccessoryType = .checkmark
+        } else {
+            cell.editingAccessoryType = .none
+        }
         return cell
     }
 
@@ -133,6 +150,61 @@ class MSFSafariViewController: UITableViewController, UISearchControllerDelegate
             vc.delegate = self
             vc.modalPresentationStyle = .pageSheet
             present(vc, animated: true)
+        }
+    }
+}
+
+extension MSFSafariViewController {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if favorites.contains(indexPath.row) {
+            return .delete
+        } else {
+            return .insert
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .insert {
+            favorites.append(indexPath.row)
+            index(item: indexPath.row)
+        } else {
+            if let index = favorites.firstIndex(of: indexPath.row) {
+                favorites.remove(at: index)
+                deindex(item: indexPath.row)
+            }
+        }
+
+        let defaults = UserDefaults.standard
+        defaults.set(favorites, forKey: "favorites")
+        tableView.reloadRows(at: [indexPath], with: .none)
+    }
+
+    func index(item: Int) {
+        let project = projects[item]
+
+        let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
+        attributeSet.title = project[0]
+        attributeSet.contentDescription = project[1]
+
+        let item = CSSearchableItem(uniqueIdentifier: "\(item)", domainIdentifier: "com.hackingwithswift", attributeSet: attributeSet)
+
+        item.expirationDate = Date.distantFuture
+        CSSearchableIndex.default().indexSearchableItems([item]) { error in
+            if let error = error {
+                print("Indexing error: \(error.localizedDescription)")
+            } else {
+                print("Search item successfully indexed!")
+            }
+        }
+    }
+
+    func deindex(item: Int) {
+        CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: ["\(item)"]) { error in
+            if let error = error {
+                print("Deindexing error: \(error.localizedDescription)")
+            } else {
+                print("Search item successfully removed!")
+            }
         }
     }
 }

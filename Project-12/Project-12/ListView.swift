@@ -57,6 +57,9 @@ struct ListView: View {
                 LinkButton(text: "MSFSafariView") {
                     myNavigationController.pushViewController(MSFSafariViewController(), animated: true)
                 }
+                LinkButton(text: "AudioRecordeView") {
+                    myNavigationController.pushViewController(AudioRecorderViewController(), animated: true)
+                }
             }
 
             Section(header: Text("SwiftUI View Group")) {

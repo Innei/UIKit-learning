@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B2FC8CA25E53A5A006D75EE /* MSFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FC8C925E53A5A006D75EE /* MSFSafariViewController.swift */; };
+		0B2FC8D225E89D41006D75EE /* AudioRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FC8D125E89D41006D75EE /* AudioRecorderViewController.swift */; };
 		0BC5F93B25DFF5A800AE78A5 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F93A25DFF5A800AE78A5 /* LocationView.swift */; };
 		0BC5F93F25E149D200AE78A5 /* NSAttributedStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5F93E25E149D200AE78A5 /* NSAttributedStringViewController.swift */; };
 		0BC5F94325E14A6800AE78A5 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 0BC5F94225E14A6800AE78A5 /* FlexLayout */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		0B2FC8C925E53A5A006D75EE /* MSFSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSFSafariViewController.swift; sourceTree = "<group>"; };
+		0B2FC8D125E89D41006D75EE /* AudioRecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderViewController.swift; sourceTree = "<group>"; };
 		0BC5F93A25DFF5A800AE78A5 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		0BC5F93E25E149D200AE78A5 /* NSAttributedStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringViewController.swift; sourceTree = "<group>"; };
 		0BC5F95025E1507F00AE78A5 /* FlexLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				0BF2DA7325DBB44800B0ABAA /* AppDelegate.swift */,
+				0B2FC8D125E89D41006D75EE /* AudioRecorderViewController.swift */,
 				0BF2DA7C25DBB44A00B0ABAA /* Assets.xcassets */,
 				0BC5F97425E35C6400AE78A5 /* AuthenticationViewController.swift */,
 				0BF2DAA025DD553900B0ABAA /* Capital.swift */,
@@ -246,6 +249,7 @@
 				0BC5F97125E2804800AE78A5 /* EditorViewController.swift in Sources */,
 				0BF2DA9425DD2F4A00B0ABAA /* ImagePickerViewController.swift in Sources */,
 				0BF2DA7425DBB44800B0ABAA /* AppDelegate.swift in Sources */,
+				0B2FC8D225E89D41006D75EE /* AudioRecorderViewController.swift in Sources */,
 				0BC5F96125E2733B00AE78A5 /* Extension.swift in Sources */,
 				0BC5F97525E35C6400AE78A5 /* AuthenticationViewController.swift in Sources */,
 				0BF2DAA125DD553900B0ABAA /* Capital.swift in Sources */,

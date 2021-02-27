@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Can you hear me</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>~~~~~~~</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>!!!!!</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -26,8 +20,6 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Want to access</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -57,10 +49,6 @@
 	<array>
 		<string>armv7</string>
 	</array>
-	<key>UIRequiresFullScreen</key>
-	<false/>
-	<key>UIStatusBarHidden</key>
-	<false/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -74,7 +62,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSFaceIDUsageDescription</key>
-	<string>Identify yourself!</string>
 </dict>
 </plist>
