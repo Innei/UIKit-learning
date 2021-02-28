@@ -22,6 +22,7 @@ class MyCellView: UITableViewCell {
 class ViewController: UITableViewController {
     var container: NSPersistentContainer!
     var commits = [Commit]()
+    var commitPredicate: NSPredicate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,15 +33,22 @@ class ViewController: UITableViewController {
         container = NSPersistentContainer(name: "Model")
 
         container.loadPersistentStores { desc, error in
+            self.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
+
             print(desc)
             if let error = error {
                 print("Unresolved error \(error)")
             }
         }
 
-        performSelector(inBackground: #selector(fetchCommits), with: nil)
-        
+        fetchCommits()
+
         loadSavedData()
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(changeFilter))
+//        let rc = UIRefreshControl()
+//        rc.addTarget(self, action: #selector(fetchCommits), for: .valueChanged)
+//        tableView.refreshControl = rc
     }
 
     @objc func fetchCommits() {
@@ -63,12 +71,16 @@ class ViewController: UITableViewController {
                 self.saveContext()
             }
         }
+
+        tableView.refreshControl?.endRefreshing()
     }
 
     func loadSavedData() {
         let request = Commit.createFetchRequest()
         let sort = NSSortDescriptor(key: "date", ascending: false)
         request.sortDescriptors = [sort]
+        request.predicate = self.commitPredicate
+        
 
         do {
             commits = try container.viewContext.fetch(request)
@@ -99,7 +111,47 @@ class ViewController: UITableViewController {
     }
 }
 
-// - Mark: table
+extension ViewController {
+    @objc func changeFilter() {
+        let ac = UIAlertController(title: "Filter commits…", message: nil, preferredStyle: .actionSheet)
+
+        // 1
+        ac.addAction(UIAlertAction(title: "Show only fixes", style: .default) { [unowned self] _ in
+            self.commitPredicate = NSPredicate(format: "message CONTAINS[c] 'fix'")
+            self.loadSavedData()
+        })
+
+        // 2
+        ac.addAction(UIAlertAction(title: "Ignore Pull Requests", style: .default) { [unowned self] _ in
+            self.commitPredicate = NSPredicate(format: "NOT message BEGINSWITH 'Merge pull request'")
+            self.loadSavedData()
+        })
+
+        // 3
+        ac.addAction(UIAlertAction(title: "Show only recent", style: .default) { [unowned self] _ in
+            let twelveHoursAgo = Date().addingTimeInterval(-43200)
+            self.commitPredicate = NSPredicate(format: "date > %@", twelveHoursAgo as NSDate)
+            self.loadSavedData()
+        })
+
+        // 4
+        ac.addAction(UIAlertAction(title: "Show only Durian commits", style: .default) { [unowned self] _ in
+            self.commitPredicate = NSPredicate(format: "author.name == 'Joe Groff'")
+            self.loadSavedData()
+        })
+
+        // 5
+        ac.addAction(UIAlertAction(title: "Show all commits", style: .default) { [unowned self] _ in
+            self.commitPredicate = nil
+            self.loadSavedData()
+        })
+
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(ac, animated: true)
+    }
+}
+
+// - MARK: table
 extension ViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -113,8 +165,10 @@ extension ViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         let commit = commits[indexPath.row]
+
         cell.textLabel!.text = commit.message
-        cell.detailTextLabel!.text = commit.date.description
+        cell.detailTextLabel?.text = commit.sha
+//        cell.detailTextLabel!.text = commit.date.description
 
         return cell
     }

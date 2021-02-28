@@ -2,7 +2,7 @@
 //  Commit+CoreDataProperties.swift
 //  GithubCommits
 //
-//  Created by Innei on 2021/2/27.
+//  Created by Innei on 2021/2/28.
 //
 //
 
@@ -16,10 +16,11 @@ extension Commit {
         return NSFetchRequest<Commit>(entityName: "Commit")
     }
 
-    @NSManaged public var date: Date
-    @NSManaged public var message: String
-    @NSManaged public var sha: String
-    @NSManaged public var url: String
+    @NSManaged public var date: Date?
+    @NSManaged public var message: String?
+    @NSManaged public var sha: String?
+    @NSManaged public var url: String?
+    @NSManaged public var author: Author?
 
 }
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		0B2FC8FB25EA27A8006D75EE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FC8F925EA27A8006D75EE /* Model.xcdatamodeld */; };
 		0B2FC92025EA319B006D75EE /* Commit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FC91E25EA319B006D75EE /* Commit+CoreDataClass.swift */; };
 		0B2FC92125EA319B006D75EE /* Commit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FC91F25EA319B006D75EE /* Commit+CoreDataProperties.swift */; };
+		0BA0E61C25EB924200BD2BF5 /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA0E61A25EB924200BD2BF5 /* Author+CoreDataClass.swift */; };
+		0BA0E61D25EB924200BD2BF5 /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA0E61B25EB924200BD2BF5 /* Author+CoreDataProperties.swift */; };
 		779B4E8D0F3082BCBDECD88D /* Pods_GithubCommits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95D56ED29E7B63E02E86D92 /* Pods_GithubCommits.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		0B2FC8FA25EA27A8006D75EE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0B2FC91E25EA319B006D75EE /* Commit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		0B2FC91F25EA319B006D75EE /* Commit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		0BA0E61A25EB924200BD2BF5 /* Author+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		0BA0E61B25EB924200BD2BF5 /* Author+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		9AC7DD7442D5546FEE4AE698 /* Pods-GithubCommits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubCommits.debug.xcconfig"; path = "Target Support Files/Pods-GithubCommits/Pods-GithubCommits.debug.xcconfig"; sourceTree = "<group>"; };
 		E95D56ED29E7B63E02E86D92 /* Pods_GithubCommits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubCommits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +75,8 @@
 		0B2FC8E025EA2644006D75EE /* GithubCommits */ = {
 			isa = PBXGroup;
 			children = (
+				0BA0E61A25EB924200BD2BF5 /* Author+CoreDataClass.swift */,
+				0BA0E61B25EB924200BD2BF5 /* Author+CoreDataProperties.swift */,
 				0B2FC91E25EA319B006D75EE /* Commit+CoreDataClass.swift */,
 				0B2FC91F25EA319B006D75EE /* Commit+CoreDataProperties.swift */,
 				0B2FC8E125EA2644006D75EE /* AppDelegate.swift */,
@@ -92,7 +98,6 @@
 				9AC7DD7442D5546FEE4AE698 /* Pods-GithubCommits.debug.xcconfig */,
 				060BE06C0A962119EDA6D9EA /* Pods-GithubCommits.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -220,8 +225,10 @@
 			files = (
 				0B2FC92025EA319B006D75EE /* Commit+CoreDataClass.swift in Sources */,
 				0B2FC8E625EA2644006D75EE /* ViewController.swift in Sources */,
+				0BA0E61D25EB924200BD2BF5 /* Author+CoreDataProperties.swift in Sources */,
 				0B2FC92125EA319B006D75EE /* Commit+CoreDataProperties.swift in Sources */,
 				0B2FC8E225EA2644006D75EE /* AppDelegate.swift in Sources */,
+				0BA0E61C25EB924200BD2BF5 /* Author+CoreDataClass.swift in Sources */,
 				0B2FC8FB25EA27A8006D75EE /* Model.xcdatamodeld in Sources */,
 				0B2FC8E425EA2644006D75EE /* SceneDelegate.swift in Sources */,
 				0B2FC8F725EA26DD006D75EE /* DetailViewController.swift in Sources */,
